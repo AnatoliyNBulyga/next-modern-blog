@@ -1,7 +1,6 @@
 import getCurrentUser from "@/actions/getCurrentUser";
 import getPostById from "@/actions/getPostById";
 import WritePageClient from "@/app/write/[pageId]/WritePageClient";
-import {SafeUser} from "@/types";
 
 
 interface IParams {
