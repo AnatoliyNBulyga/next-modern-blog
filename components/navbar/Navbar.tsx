@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 import UserMenu from "@/components/navbar/UserMenu";
 import Link from "next/link";
 import {useMemo, useState} from "react";
-import {SafePost, SafePostWithoutAuthor, SafeUser} from "@/types";
+import {SafePostWithoutAuthor, SafeUser} from "@/types";
 
 interface NavbarProps {
     currentUser?: SafeUser | null;
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser, posts }) => {
                                                     uppercase 
                                                     ${active === category && "shadow-md"}
                                                 `}
-                                                onClick={(event) => setActive(category)}
+                                                onClick={() => setActive(category)}
                                             >
                                                 {category}
                                             </Link>
