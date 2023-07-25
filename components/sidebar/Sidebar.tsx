@@ -13,7 +13,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ currentPost, posts }) => {
     const router = useRouter();
 
-    const relatedPosts = useMemo(() => posts && posts.filter((post) => post.id !== currentPost.id && post.cat === currentPost.cat), [posts]);
+    const relatedPosts = useMemo(() => posts && posts.filter((post) => post.id !== currentPost.id && post.cat === currentPost.cat), [posts, currentPost.id, currentPost.cat]);
 
     return (
         <div>

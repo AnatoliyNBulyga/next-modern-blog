@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser, posts }) => {
     const categories = posts && posts.map((post: SafePostWithoutAuthor) => post.cat);
     const uniqueCatItems: string[] = useMemo(() => {
         return Array.from(new Set(categories));
-    }, [posts]);
+    }, [categories]);
 
     return (
         <div className="fixed w-full bg-white z-20 shadow-sm">
