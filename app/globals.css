@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+}
+
+html,
+body,
+:root {
+    height: 100%;
+}
+
+.container {
+    @apply max-w-[1440px] mx-auto xl:px-20 md:px-10 sm:px-2 px-4
+}
+
+/* START: Hero styles */
+.hero {
+    @apply flex lg:flex-row flex-col gap-5 relative z-0 max-lg:mb-10;
+}
+
+.hero__title {
+    @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-black leading-tight;
+}
+
+.hero__subtitle {
+    @apply text-[24px] text-black-100 mt-7 font-light;
+}
+
+.hero__image-container {
+    @apply lg:flex-[1.1] flex justify-end items-end w-full lg:h-[calc(100vh_-_100px)] overflow-hidden lg:pl-4;
+}
+
+.hero__image {
+    @apply relative lg:w-full w-[90%] lg:h-full h-[590px] z-0 max-lg:hidden;
+}
+
+.hero__image-overlay {
+    @apply absolute lg:-top-36 lg:-right-[60%] -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full lg:h-full h-[560px] max-lg:hidden;
+}
+/* END: Hero styles */
+
+/* Article styles */
+.article {
+    @apply col-span-1 cursor-pointer hover:shadow-xl rounded-lg overflow-hidden flex flex-col gap-2 w-full
+}
+.article__image {
+    @apply w-full relative overflow-hidden
+}
+/* END: Article styles */
